@@ -15,7 +15,7 @@ gray = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
 
 ###################### 4. image thresholding - global, adaptive(mean or gaussian) ###########################
 neighbor, const = 11, 2
-retval, bnr = cv2.threshold(gray, 0xFF >> 2, 0xFF, cv2.THRESH_BINARY)
+retval, bnr = cv2.threshold(gray, 0xFF >> 1, 0xFF, cv2.THRESH_BINARY)
 Abnr = cv2.adaptiveThreshold(gray, 0xFF, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, neighbor, const )
 #Abnr = cv2.adaptiveThreshold(gray, 0xFF, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, neightbor, const)
 print("result of threshold [%d]" %(retval))
